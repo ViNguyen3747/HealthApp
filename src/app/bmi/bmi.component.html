@@ -1,0 +1,81 @@
+<body>
+<mat-vertical-stepper #stepper color="accent" >
+    <mat-step [stepControl]="bmiFormGroup" errorMessage="Please finish the first step.">
+      <form [formGroup]="bmiFormGroup" >
+        <ng-template matStepLabel>Enter Your Values</ng-template>
+            <div class="weight">
+                <mat-form-field color="accent"  > 
+                    <mat-label>Weight</mat-label>
+                    <input matInput type='number' formControlName="weight" required>
+                    <mat-error *ngIf="bmiFormGroup.get('weight').errors?.isInvalid">
+                        Please enter a valid value
+                    </mat-error>        
+                </mat-form-field>
+                <mat-form-field apperance="fill"color="accent"  >
+                    <mat-label>Weight Unit</mat-label>
+                    <mat-select formControlName="selectedWeightUnit">
+                        <mat-option value="kg">kg</mat-option>
+                        <mat-option value="lbs">lbs</mat-option>
+                    </mat-select>
+                    </mat-form-field>
+            </div>
+            <div class="height">
+                <mat-form-field color="accent"  >
+                    <mat-label>Height</mat-label>
+                    <input matInput type='number' formControlName="height" required>
+                    <mat-error *ngIf="bmiFormGroup.get('height').errors?.isInvalid">
+                        Please enter a valid value
+                    </mat-error>        
+                </mat-form-field>
+                <mat-form-field color="accent"  >
+                    <mat-label>Height Unit</mat-label>
+                    <mat-select formControlName="selectedHeightUnit">
+                        <mat-option value="cm">cm</mat-option>
+                        <mat-option value="ft">ft</mat-option>
+                    </mat-select>
+                    </mat-form-field>
+            </div>
+            <div class="gender">
+                <mat-label>Gender</mat-label>
+                <mat-radio-group  color="accent"  aria-labelledby="gender" formControlName="whichGender">
+                    <mat-radio-button class="gender-button" value="female">Female</mat-radio-button>
+                    <mat-radio-button  class="gender-button" value="male">Male</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div class="age">
+                <mat-form-field color="accent"  >
+                    <mat-label>Age</mat-label>
+                    <input matInput type='number' formControlName="age" required>
+                    <mat-error *ngIf="bmiFormGroup.get('age').errors?.isInvalid">
+                        Please enter a valid value
+                    </mat-error>        
+                </mat-form-field>  years
+            </div>
+        <div>
+          <button mat-raised-button matStepperNext (click)='calculation()'>next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step name="step 2" state='edit'>              
+        <ng-template matStepLabel> Your BMI and Body Fat</ng-template>
+        <app-status [bmi]='_bmi' [bodyFat]='_bodyFat' [bodyFatWeight]='_bodyFatWeight' [gender]='_gender' [unit]="_unit"></app-status> 
+        <div>
+            <button mat-raised-button matStepperNext>next</button>  
+          <button mat-raised-button matStepperPrevious>back</button>
+          
+        </div>
+    </mat-step>
+    <mat-step state='edit'>
+      <ng-template matStepLabel>Your Calorie Needs</ng-template>
+      <app-macros [weight]='_weight' [height]='_height' [age]='_age' [gender]='_gender'></app-macros>
+      <div>
+        <button mat-raised-button (click)="stepper.reset()">Reset</button>
+        <button mat-raised-button matStepperPrevious>Back</button>
+    </div>
+    </mat-step>
+    <ng-template matStepperIcon="edit">
+        <mat-icon>done</mat-icon>
+    </ng-template>   
+</mat-vertical-stepper>
+</body>
+  

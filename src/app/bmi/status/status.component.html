@@ -1,0 +1,38 @@
+<div class="step2">
+    <div>
+        <label>Your BMI: </label> {{ bmi | number: '1.0-0' }}
+    </div>
+    <div>
+        <label>Your body fat percentage: </label> {{bodyFat | number: '1.0-0'}} %
+    </div>
+    <div>        
+        <label>Your body fat weight: </label> {{ bodyFatWeight | number: '1.0-0' }} {{unit}}
+    </div>
+    <div class='table'>
+    <table class='bmi-table'>
+        <thead>
+            <tr>
+                <th>Weight Status</th>                    
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let weight of weightStatus'
+                [ngClass]="whichWeightStatus(bmi) == weight.id && bmi > 0? 'rededOut' : 'normal'">
+                <td>{{ weight.weightStatus }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class='body-fat-table'>
+        <thead>
+            <tr>
+                <th>Body Fat Status</th>                    
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let bf of bodyFatStatus'>
+                <td *ngIf="gender === bf.gender" [ngClass]="whichBodyFatStatus(bodyFat, bf.gender) == bf.id && bodyFat > 0 ? 'rededOut' : 'normal'">{{ bf.status }}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</div>

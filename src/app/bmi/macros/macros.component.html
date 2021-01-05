@@ -1,0 +1,58 @@
+<form [formGroup]="secondFormGroup">
+    <div class="activeLevel">
+        <mat-form-field apperance="fill" color="accent">
+            <mat-label>Level of Activity</mat-label>
+            <mat-select formControlName="activityLevel">
+                <mat-option value="sedentary">Sedentary (limited exercise)</mat-option>
+                <mat-option value="light">Lightly active (light exercise less than three days per week)</mat-option>
+                <mat-option value="moderate">Moderately active (moderate exercise most days of the week)</mat-option>
+                <mat-option value="very">Very active (hard exercise every day)</mat-option>
+                <mat-option value="extra">Extra active (strenuous exercise two or more times per day)</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="nutrition">
+            <mat-form-field color="accent">
+                <mat-label>Protein</mat-label>
+                <input matInput type='number' formControlName="protein" required>
+            </mat-form-field>
+            % of daily calories
+        </div>
+        <div class="nutrition">
+            <mat-form-field color="accent">
+                <mat-label>Carbs</mat-label>
+                <input matInput type='number' formControlName="carbs" required>
+            </mat-form-field>
+            % of daily calories
+        </div>
+        <div class="nutrition">
+            <mat-form-field color="accent"> 
+                <mat-label>Fat</mat-label>
+                <input matInput type='number' formControlName="fat" required>
+            </mat-form-field>
+            % of daily calories
+        </div>
+    </div>
+    <div>
+        <button mat-raised-button (click)='nutritionCalculation()'>Find out your calorie needs</button>
+    </div>
+</form>
+
+<table class='result'>
+    <tr>
+        <th>Estimated calorie needs per day</th>
+        <td> {{ calories | number: '1.0-0' }}</td>
+    </tr>
+    <tr>
+        <th>Protein (grams) </th>
+        <td>{{protein | number: '1.0-0'}} </td>        
+    </tr>
+    <tr>
+        <th>Carbohydrates (grams)</th>
+        <td>{{carbs | number: '1.0-0'}} </td>
+    </tr>
+    <tr>
+        <th>Fat (grams)</th>
+        <td>{{ fat | number: '1.0-0'}} </td>
+    </tr>
+</table>
+

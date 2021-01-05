@@ -1,0 +1,54 @@
+body {
+    background: white;
+    color: rgb(224, 160, 160); 
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    padding: 50px;
+    height:auto;
+
+}
+
+a {
+    text-decoration: none;
+    color:rgb(223, 130, 130);
+    font-size: larger;
+}
+
+header {
+    width: 100%;    
+    background: white;
+}
+
+.button {
+    color: salmon;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 0;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.button span {    
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span::before {    
+    content: '\00AB';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-left: 25px;
+ }
+  
+.button:hover span::before {
+    opacity: 1;
+    left: 0;
+}

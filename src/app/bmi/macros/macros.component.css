@@ -1,0 +1,20 @@
+
+mat-form-field{
+    width: 50%;
+}
+.result {
+    float: top;
+}
+
+mat-label {
+    color: rgb(224, 160, 160);
+    font-family: Verdana, Arial, Helvetica, sans-serif;    
+}
+table th{
+    text-align: right;
+    font-weight: normal;
+
+}
+table td {
+    text-align: left;
+}

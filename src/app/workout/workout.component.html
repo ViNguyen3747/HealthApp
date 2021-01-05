@@ -1,0 +1,49 @@
+<body>
+
+<div class="container">
+      <div class="first">
+        <mat-icon>arrow_right_alt</mat-icon>
+      </div>
+      <div class="box" [routerLink]="['/work-out', 'monday']">
+        <h1>Monday</h1>
+        <h2>Muscle Groups</h2>
+        <p>chest, shoulders, triceps forearms</p>
+        <mat-icon>arrow_right_alt</mat-icon>
+      </div>
+      <div class="box"  [routerLink]="['/work-out/rest-day']">
+        <h1>Tuesday</h1>
+        <mat-icon class="rest">beach_access</mat-icon>
+        <mat-icon>arrow_right_alt</mat-icon>
+      </div>
+      <div class="box" [routerLink]="['/work-out', 'wednesday']">
+        <h1>Wednesday</h1>
+        <h2>Muscle Groups</h2>
+        <p>calves, harmstring, quadriceps, glutes</p>
+        <mat-icon>arrow_right_alt</mat-icon>
+      </div>
+      <div class="box" [routerLink]="['/work-out/rest-day']">
+        <h1>Thursday</h1>
+        <mat-icon class="rest">beach_access</mat-icon>
+        <mat-icon>arrow_right_alt</mat-icon>
+      </div>
+      <div class="box" [routerLink]="['/work-out', 'friday']">
+        <h1>Friday</h1>
+        <h2>Muscle Groups</h2>
+        <p>biceps, back, abdominals, traps, lats</p>
+        <mat-icon>arrow_right_alt</mat-icon>
+      </div>
+      <div class="box"  [routerLink]="['/work-out/rest-day']">
+        <h1>Saturday</h1>
+        <mat-icon class="rest">beach_access</mat-icon>
+        <mat-icon>arrow_right_alt</mat-icon>
+      </div>
+      <div class="box" [routerLink]="['/work-out/rest-day']">
+        <h1>Sunday</h1>
+        <mat-icon class="rest">beach_access</mat-icon>
+        <mat-icon>arrow_right_alt</mat-icon>
+      </div>
+      <div class="home" (click)="onBack()">
+          <mat-icon>home</mat-icon>
+      </div>
+</div>
+</body>

@@ -1,0 +1,32 @@
+
+mat-vertical-stepper{
+  height: 100vh;
+  background: #f8f8f8e7;
+  overflow: hidden;
+}
+
+mat-radio-button {
+  padding: 5px;
+}
+mat-label {
+  color: rgb(224, 160, 160);
+  font-size: 15px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+form {
+  text-align: center;
+}
+
+
+button {
+  margin: 5px;
+  float: right;
+  background-color: rgb(233, 186, 186);
+  color: white;
+}
+
+
+
+
+
+

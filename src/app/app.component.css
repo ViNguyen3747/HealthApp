@@ -1,0 +1,74 @@
+
+body {
+  height:fit-content;
+}
+mat-sidenav-container {
+  font-family: "Lato", sans-serif;  
+  height: 100%;
+}
+mat-sidenav {
+  height: 100%;
+  width: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(233, 186, 186);  
+  padding-top: 60px;
+  
+}
+ul {
+  list-style-type: none;
+  padding: 10px;
+}
+mat-sidenav a{
+  padding: 8px 8px 20px 8px;
+  text-decoration: none;
+  font-size: 25px;  
+  display: block;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+mat-sidenav a:hover{
+  color:rgb(223, 112, 112)
+}
+mat-sidenav button {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  color: #ffffff;
+  font-size: 40px;
+  margin-left: 70px;
+}
+mat-sidenav-content {  
+  background: #f8f8f8e7;
+  overflow-y: hidden;
+}
+.menu  {
+  font-size: 40px;
+  color:rgb(223, 112, 112);
+  padding: 5px;
+}
+
+.menu:hover{
+  cursor: pointer;
+}
+
+.header span {
+  float: right;
+  color:rgb(223, 112, 112);
+  padding-top: 15px;
+  padding-right: 15px;
+}
+
+a {
+  text-decoration: none;
+  color:rgb(223, 130, 130);
+  font-size: larger;
+}
+
+
+
+
+
+

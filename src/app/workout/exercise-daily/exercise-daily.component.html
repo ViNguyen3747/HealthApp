@@ -1,0 +1,46 @@
+<div class='card-header'>
+    <div class="button" (click)='onBack()'>
+    <span>Back</span>
+    </div>
+</div>
+<mat-vertical-stepper color="accent">
+    <ng-template matStepperIcon="edit">
+        <mat-icon>done</mat-icon>
+    </ng-template>                
+    <mat-step *ngFor='let exercise of exercises' state="edit">
+        <ng-template matStepLabel>{{ exercise.name }}</ng-template>
+        <div class="exercise-detail">
+            <youtube-player *ngIf="exercise.videoId != '';"
+            [videoId]="exercise.videoId">
+            </youtube-player>
+            <iframe *ngIf="exercise.gif" [src]='exercise.gif  | safeUrl'  frameborder='0' scrolling='no' allowfullscreen></iframe>
+            <div *ngIf="exercise.name!='Plank' && exercise.name!='Side Plank'; else isPlank">
+                <div class='detail'>
+                    <div>3 Sets, Reps per set: 10 - 15</div>  
+                    <div>Rest Time Between Sets <countdown #cd1 [config]="{leftTime: 30, notify:0, format: 'mm:ss', demand: true}"></countdown>
+                        <button mat-raised-button (click)="cd1.begin()" class="btn btn-link btn-sm">start</button>
+                        <button mat-raised-button (click)="cd1.restart()" class="btn btn-link btn-sm">restart</button>
+                    </div>                  
+                    <div>Rest Time Between Exercises <countdown #cd2 [config]="{leftTime: 60, format: 'mm:ss', demand: true}"></countdown>
+                        <button mat-raised-button (click)="cd2.begin()" class="btn btn-link btn-sm">start</button>
+                    </div>
+                </div>
+            </div>
+            <ng-template #isPlank>
+                <div class='detail'>
+                    <div>3 Sets, 1 min per set</div>        
+                    <div>
+                    <countdown  #cd3 [config]="{leftTime: 60, format: 'mm:ss', demand: true}"></countdown>
+                        <button mat-raised-button (click)="cd3.begin()" class="btn btn-link btn-sm">start</button>
+                        <button mat-raised-button (click)="cd3.restart()" class="btn btn-link btn-sm">restart</button>
+                    </div>
+                    <div>Rest Time Between Sets <countdown #cd4 [config]="{leftTime: 30, format: 'mm:ss', demand: true}"></countdown>
+                        <button mat-raised-button (click)="cd4.begin()" class="btn btn-link btn-sm">start</button>
+                        <button mat-raised-button (click)="cd4.restart()" class="btn btn-link btn-sm">restart</button>
+                    </div>
+                </div>
+            </ng-template>    
+        </div>
+    </mat-step>      
+</mat-vertical-stepper>
+
