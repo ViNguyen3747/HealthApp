@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "weightStatus": "Underweight: below 18.5"
+    },{
+        "id": 2,
+        "weightStatus": "Normal or Healthy Weight: 18.5 - 24.9"
+    },{
+        "id": 3,
+        "weightStatus": "Overweight: 25.0 - 29.9"
+    },{
+        "id": 4,
+        "weightStatus": "Obese: 30.0 or above"
+    }
+]

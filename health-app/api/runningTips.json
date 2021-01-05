@@ -1,0 +1,84 @@
+[
+    {
+        "id": 1,
+        "valueF": "20 to 24",
+        "valueC": "-6 to -4",
+        "outfits": [
+            "Layered wind-resistant mittens over gloves to keep the feeling in your finger",
+            "Lined shoes designed for cold conditions"
+        ]
+    },{
+        "id": 2,
+        "valueF": "25 to 29",
+        "valueC": "-3 to -2",
+        "outfits": [
+            "Sweat-wicking materials help keep hair dry when you sweat"
+        ]
+    },{
+        "id": 3,
+        "valueF": "30 to 34",
+        "valueC": "-1 to 1",
+        "outfits": [
+            "A hybrid jacket provides the warmth of a vest and fleece all in one",
+            "Brushed leggings help keep your legs toasty when temperatures dipbelow freezing"
+        ]
+    },{
+        "id": 4,
+        "valueF": "35 to 39",
+        "valueC": "2 to 4",
+        "outfits": [
+            "A light-weight, fleece-lined jacket will keep you warmth without tons of layers",
+            "Tech-friendly gloves let you manage your playlist without removing layers, which slows you down"
+        ]
+    },{
+        "id": 5,
+        "valueF": "40 to 44",
+        "valueC": "5 to 7",
+        "outfits": [
+            "When down filling gets wet, it hangs on to moisture and weighs you down. OPT for synthetic fillers designed to repel sweat",
+            "Use fingerless gloves or sleeves to protect your hands when it's too warm for gloves. Push them up to your forearms after you're warmed up"
+        ]
+    },{
+        "id": 6,
+        "valueF": "45 to 49",
+        "valueC": "8 to 9",
+        "outfits": [
+            "Once you're warmed up, you can lower the jacket's zipper to let the heat escape"
+        ]
+    },{
+        "id": 7,
+        "valueF": "50 to 54",
+        "valueC": "10 to 12",
+        "outfits": [
+            "If you run in the evening or before dawn, look for reflective detailing to help vehicles see you"
+        ]
+    },{
+        "id": 8,
+        "valueF": "55 to 59",
+        "valueC": "13 to 15",
+        "outfits": [
+            "Just push up the sleeves when you get toasty - it's more convenient than removing a whole layer and then having to hold it while you run"
+        ]
+    },{
+        "id": 9,
+        "valueF": "60 to 69",
+        "valueC": "16 to 21",
+        "outfits": [
+            "T-shirt sleeves protect your shoulder from the sun"
+        ]
+    },{
+        "id": 10,
+        "valueF": "70 to 79",
+        "valueC": "22 to 26",
+        "outfits": [
+            "Carpris with mesh panels provide extra coverage and still keep you cool"
+        ]
+    },{
+        "id": 11,
+        "valueF": "80+",
+        "valueC": "27+",
+        "outfits": [
+            "Unlike cotton, synthetic fabrics wick sweat away from the skin to keep you dry"
+        ]
+    }
+]
