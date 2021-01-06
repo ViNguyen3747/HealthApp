@@ -10,7 +10,7 @@ import { IRunning } from './running';
 })
 export class WeatherService {
   private baseWeatherAPI = 'https://api.openweathermap.org/data/2.5/weather';
-  private  APIkey = '27cc0f9e54d73d8e67bfafb8beef78e4';
+  private  APIkey = 'input-your-';
   private runningUrl = 'api/runningTips.json';
 
 
